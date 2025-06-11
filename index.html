@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lixo Eletrônico - Descarte Consciente</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="Logo do projeto" class="logo" />
+    <h1>Descarte Consciente de Lixo Eletrônico</h1>
+  </header>
+
+  <main>
+    <section class="info">
+      <h2>Por que descartar corretamente?</h2>
+      <p>
+        Lixo eletrônico contém metais pesados e componentes tóxicos. O descarte adequado evita contaminação do solo e da água.
+        Encontre pontos de coleta próximos e ajude a preservar o meio ambiente!
+      </p>
+    </section>
+
+    <section class="map-container">
+      <h2>Encontre um ponto de descarte</h2>
+      <div id="map"></div>
+    </section>
+
+    <section class="form-section">
+      <h2>Contribua</h2>
+      <form id="suggestion-form">
+        <input type="text" placeholder="Seu nome" required />
+        <input type="text" placeholder="Sugestão de ponto de descarte" required />
+        <textarea placeholder="Mensagem"></textarea>
+        <button type="submit">Enviar sugestão</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Projeto Lixo Eletrônico</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
