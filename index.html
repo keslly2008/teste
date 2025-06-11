@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-    <img src="https://images.app.goo.gl/BLhseTXojis6cf9Z7" alt="Logo do projeto" class="logo" />
+    <img src="logo.png" alt="Logo do projeto" class="logo" />
     <h1>Descarte Consciente de Lixo Eletrônico</h1>
   </header>
 
@@ -17,7 +17,7 @@
     <section class="info">
       <h2>Por que descartar corretamente?</h2>
       <p>
-        Lixo eletrônico contém metais pesados e componentes tóxicos. O descarte adequado evita contaminação do solo e da água.
+        Lixo eletrônico contém metais pesados e componentes tóxicos. O descarte adequado evita a contaminação do solo e da água.
         Encontre pontos de coleta próximos e ajude a preservar o meio ambiente!
       </p>
     </section>
@@ -30,11 +30,16 @@
     <section class="form-section">
       <h2>Contribua</h2>
       <form id="suggestion-form">
-        <input type="text" placeholder="Seu nome" required />
-        <input type="text" placeholder="Sugestão de ponto de descarte" required />
-        <textarea placeholder="Mensagem"></textarea>
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="text" name="ponto" placeholder="Sugestão de ponto de descarte" required />
+        <textarea name="mensagem" placeholder="Mensagem"></textarea>
         <button type="submit">Enviar sugestão</button>
       </form>
+
+      <div id="suggestions-list">
+        <h3>Sugestões recebidas:</h3>
+        <ul id="suggestions"></ul>
+      </div>
     </section>
   </main>
 
@@ -46,3 +51,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
