@@ -55,4 +55,3 @@ form.addEventListener('submit', e => {
   alert("Obrigado pela sua contribuição!");
   form.reset();
 });
-
