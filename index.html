@@ -1,36 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Encontre pontos de descarte para lixo eletrônico e contribua para um meio ambiente mais limpo">
+  <meta name="description"
+    content="Encontre pontos de descarte para lixo eletrônico e contribua para um meio ambiente mais limpo">
   <title>Lixo Eletrônico - Descarte Consciente</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
-  <link rel="stylesheet" href="style.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/meu.css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
+
 <body>
   <header>
     <div class="header-content">
-      <img src="logo.webp" alt="Logo do projeto" class="logo" width="60" height="60">
+      <div>
+        <img src="/assets/logo.png" alt="Logo do projeto" class="logo" width="60" height="60">
+      </div>
       <h1>Descarte Consciente de Lixo Eletrônico</h1>
+      <div class="auth-links">
+        <a href="/login.html">Login</a>
+        <span>ou</span>
+        <a href="/cadastro.html">Registre-se como um Coletor</a>
+      </div>
     </div>
   </header>
+  
+   
 
   <main>
     <section class="info card">
       <h2>Por que descartar corretamente?</h2>
+      <img src="/assets/imagem_section.jpg" alt="Descarte correto de lixo eletrônico"
+        style="margin: 20px 0; max-width: 600px; width: 100%; height: auto; border-radius: 10px;">
       <p>
-        Lixo eletrônico contém metais pesados e componentes tóxicos. O descarte adequado evita a contaminação do solo e da água.
+        Lixo eletrônico contém metais pesados e componentes tóxicos. O descarte adequado evita a contaminação do solo e
+        da água.
         Encontre pontos de coleta próximos e ajude a preservar o meio ambiente!
       </p>
     </section>
 
     <section class="map-container card">
-      <h2>Encontre um ponto de descarte</h2>
-      <div id="map"></div>
+      <h2 style="margin-bottom: 20px;">Encontre um ponto de descarte</h2>
+      <!-- <div id="map"></div> -->
+      <iframe 
+      src="https://www.google.com/maps?q=-24.00521049267507,-53.7128753446179&z=15&output=embed" 
+      width="100%" 
+      height="500" 
+      style="border: 2px solid white; border-radius: 10px;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    
     </section>
 
     <section class="form-section card">
@@ -59,10 +83,22 @@
   </main>
 
   <footer>
+    <div class="social-icons">
+      <a href="https://wa.me/seunumerowhatsapp" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://instagram.com/seuinstagram" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://facebook.com/seufacebook" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </div>
     <p>&copy; <span id="current-year">2025</span> Projeto Lixo Eletrônico</p>
   </footer>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="script.min.js" defer></script>
 </body>
+
 </html>
