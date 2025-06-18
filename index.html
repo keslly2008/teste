@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encontre pontos de descarte para lixo eletrônico e contribua para um meio ambiente mais limpo">
   <title>Lixo Eletrônico - Descarte Consciente</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+  <link rel="stylesheet" href="style.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Logo do projeto" class="logo" />
-    <h1>Descarte Consciente de Lixo Eletrônico</h1>
+    <div class="header-content">
+      <img src="logo.webp" alt="Logo do projeto" class="logo" width="60" height="60">
+      <h1>Descarte Consciente de Lixo Eletrônico</h1>
+    </div>
   </header>
 
   <main>
-    <section class="info">
+    <section class="info card">
       <h2>Por que descartar corretamente?</h2>
       <p>
         Lixo eletrônico contém metais pesados e componentes tóxicos. O descarte adequado evita a contaminação do solo e da água.
@@ -22,17 +28,26 @@
       </p>
     </section>
 
-    <section class="map-container">
+    <section class="map-container card">
       <h2>Encontre um ponto de descarte</h2>
       <div id="map"></div>
     </section>
 
-    <section class="form-section">
+    <section class="form-section card">
       <h2>Contribua</h2>
-      <form id="suggestion-form">
-        <input type="text" name="nome" placeholder="Seu nome" required />
-        <input type="text" name="ponto" placeholder="Sugestão de ponto de descarte" required />
-        <textarea name="mensagem" placeholder="Mensagem"></textarea>
+      <form id="suggestion-form" aria-label="Formulário para sugerir pontos de descarte">
+        <div class="form-group">
+          <label for="nome">Seu nome</label>
+          <input type="text" id="nome" name="nome" required>
+        </div>
+        <div class="form-group">
+          <label for="ponto">Sugestão de ponto de descarte</label>
+          <input type="text" id="ponto" name="ponto" required>
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Mensagem (opcional)</label>
+          <textarea id="mensagem" name="mensagem" rows="3"></textarea>
+        </div>
         <button type="submit">Enviar sugestão</button>
       </form>
 
@@ -44,12 +59,10 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Projeto Lixo Eletrônico</p>
+    <p>&copy; <span id="current-year">2025</span> Projeto Lixo Eletrônico</p>
   </footer>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="script.js"></script>
+  <script src="script.min.js" defer></script>
 </body>
 </html>
-
-
